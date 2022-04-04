@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  /*********/
+ /* FONTS */
+/*********/
+@font-face {
+    font-family: name-font;
+    src: url(../fonts/GrapeNuts-Regular.ttf);
+}
+
+@font-face {
+    font-family: main-font;
+    src: url(../fonts/circular-std-medium-500.ttf);
+}
+
+@font-face {
+    font-family: secondary-font;
+    src: url();
+}
+
+
+  /*********************/
+ /* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    /* COLORS */
+    --bg-color: rgb(9, 69, 7);
+    --gold-color: gold;
+
+
+    /* FONTS */
+    --name-font: name-font;
+    --main-font: main-font;
+    --seconday-font: secondary-font; 
+}
+
+
+body {
+    background-color: white;
+    font-family: var(--main-font);
+}
+
+
+
+/* NAVIGATIONBAR STYLING */
+nav h1 {
+    font-family: var(--name-font);
+    position: absolute;
+    left: 2em;
+    top: 1em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 20%; 
+}
+
+nav ul{
+    list-style: none;   
+    position: relative;
+    left: 45em;
+}
+
+nav li{
+    display: inline-block;
+    padding: 0em .75em;   
+}
+
+nav li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: darkgray;
+}
+
+nav li a:hover{
+    color: black;
+}
+
+a:nth-child(1){
+    margin-left: 10px;
+}
+
+.current{
+    color: black;
+    text-decoration: overline;
+}
