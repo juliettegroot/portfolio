@@ -28,8 +28,11 @@
 /*********************/
 :root {
     /* COLORS */
-    --bg-color: rgb(9, 69, 7);
+    --bg-primary: #1e1b21;
+    --bg-secondary: #3e4b5f;
     --gold-color: gold;
+    --font-color: rgb(246, 246, 246);
+    --font-color-lighter: rgb(164, 164, 164);
 
 
     /* FONTS */
@@ -40,25 +43,37 @@
 
 
 body {
-    background-color: white;
+    background-color: var(--bg-primary);
+    color: var(--font-color-lighter);
     font-family: var(--main-font);
 }
 
 
 
 /* NAVIGATIONBAR STYLING */
+nav img {
+    width: 2.5em;
+    position: absolute;
+    left: 1em;
+    top: 1.25em;
+}
+
 nav h1 {
     font-family: var(--name-font);
+    font-weight: bolder;
+    color: var(--font-color);
     position: absolute;
-    left: 2em;
+    left: 3em;
     top: 1em;
 }
 
 header{
+    background-color: var(--bg-secondary);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2em 20%; 
+    box-shadow: .02em .1em var(--font-color);
 }
 
 nav ul{
@@ -75,11 +90,11 @@ nav li{
 nav li a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: darkgray;
+    color: var(--font-color-lighter);
 }
 
 nav li a:hover{
-    color: black;
+    color: var(--font-color);
 }
 
 a:nth-child(1){
@@ -87,6 +102,26 @@ a:nth-child(1){
 }
 
 .current{
-    color: black;
+    color: var(--font-color);
     text-decoration: overline;
+}
+
+
+
+
+
+  /*************************/
+ /* ABOUT ME PAGE STYLING */
+/*************************/
+/*  */
+#aboutme section:nth-of-type(1) {
+    position: absolute;
+    left: calc(50% - 27em);
+
+    width: 60%; 
+}
+
+#aboutme section:nth-of-type(1) p{
+    text-align: center;
+    margin-bottom: 1em;
 }
